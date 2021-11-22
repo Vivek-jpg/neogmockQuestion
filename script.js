@@ -1,6 +1,7 @@
 const Btn = document.querySelector('.btn');
 const Output = document.querySelector('.output');
 Btn.addEventListener("click", fetchapi);
+/*
 
 function fetchapi() {
   console.log("yes");
@@ -33,3 +34,21 @@ function fetchapi() {
 
     })
 }
+*/
+
+function fetchapi(){
+fetch("https://randomsuser.me/api/")
+.then(res=>res.json())
+.then(show=>{
+  console.log(show)
+
+})
+.catch (Error => {
+  console.log(Error)
+  Output.innerText = Error;
+})
+
+  console.log("click");
+}
+
+
